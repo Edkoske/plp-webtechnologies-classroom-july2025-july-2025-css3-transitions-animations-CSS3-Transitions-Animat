@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ---------- Part 1: Pure CSS Animations ---------- */
+.hover-btn {
+  background: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s; /* CSS transition */
+}
+
+.hover-btn:hover {
+  background: #005fa3;
+  transform: scale(1.1);
+}
+
+.animated-box {
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  background: coral;
+  border-radius: 10px;
+  animation: pulse 2s infinite; /* CSS keyframe animation */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ---------- Part 3: JS + CSS ---------- */
+.magic-box {
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  background: teal;
+  border-radius: 10px;
+  transition: transform 0.8s ease-in-out;
+}
+
+.magic-box.animate {
+  transform: rotate(360deg) scale(1.3);
+}
